@@ -1,0 +1,2 @@
+rootProject.name='Mision Servi'
+include ':app'
