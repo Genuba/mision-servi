@@ -15,7 +15,7 @@ public interface JsonPlaceHolderApi {
     Call<Login> postLogin();
 
     @POST("api/Encuesta/{cedula}")
-    Call<Persona> getPersona(@Path("cedula") int cedula);
+    Call<Persona> getPersona(@Path("cedula") String cedula);
 
     @POST("api/Encuesta/RegistrarEncuesta")
     Call<Encuesta> postEncuesta();
