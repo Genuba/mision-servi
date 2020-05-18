@@ -1,5 +1,6 @@
 package com.example.misionservi
 
+import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -33,10 +34,12 @@ class PersonaForm : AppCompatActivity() {
             .build()
         jsonPlaceHolderApi = retrofit.create(JsonPlaceHolderApi::class.java)
 
-        this.txtCedula = findViewById<EditText>(R.id.cedula)
-        this.txtNombre = findViewById<EditText>(R.id.nombre)
+        this.txtCedula = findViewById(R.id.cedula)
+        this.txtNombre = findViewById(R.id.nombre)
 
-        this.txtCedula?.addTextChangedListener(object : TextWatcher {
+
+
+        /*this.txtCedula?.addTextChangedListener(object : TextWatcher {
 
             override fun afterTextChanged(s: Editable) {}
 
@@ -48,11 +51,12 @@ class PersonaForm : AppCompatActivity() {
                                        before: Int, count: Int) {
                 getPersona(s.toString())
             }
-        })
+        })*/
     }
 
     fun encuestaContinue(v: View?) {
-
+        val intent = Intent(this, EncuestaPagUno::class.java)
+        startActivity(intent)
     }
 
     fun getPersona(cedula: String) {
