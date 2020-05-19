@@ -8,6 +8,7 @@ import android.util.Log
 import android.view.View
 import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.misionservi.interfaces.JsonPlaceHolderApi
 import com.example.misionservi.model.Persona
@@ -66,8 +67,17 @@ class PersonaForm : AppCompatActivity() {
     }
 
     fun encuestaContinue(v: View?) {
-        val intent = Intent(this, EncuestaPagUno::class.java)
-        startActivity(intent)
+
+        if (txtCedula?.getText().toString().isEmpty() || txtNombre?.getText().toString().isEmpty()){
+            Toast.makeText(this, "Debe llenar todos los campos", Toast.LENGTH_LONG).show()
+        }else{
+            val intent = Intent(this, EncuestaPagUno::class.java)
+            intent.putExtra("token",intent.getStringExtra("token"))
+            intent.putExtra("numeroDocumento", txtCedula?.getText().toString())
+            intent.putExtra("nombre", txtNombre?.getText().toString())
+            startActivity(intent)
+        }
+
     }
 
     fun getPersona(cedula: String) {
@@ -80,7 +90,7 @@ class PersonaForm : AppCompatActivity() {
             override fun onResponse(call: Call<Persona>, response: Response<Persona>) {
                 var postResponse = response.body()
                 if (postResponse != null) {
-                    txtNombre?.setText(postResponse.nombre, TextView.BufferType.EDITABLE)
+                    txtNombre?.setText(postResponse.mombre, TextView.BufferType.EDITABLE)
                 };
             }
 

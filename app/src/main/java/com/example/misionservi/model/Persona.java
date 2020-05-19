@@ -2,8 +2,16 @@ package com.example.misionservi.model;
 
 public class Persona {
     private int idPersona;
-    private String nombre;
+    private String mombre;
     private String documento;
+
+    public String getMombre() {
+        return mombre;
+    }
+
+    public void setMombre(String mombre) {
+        this.mombre = mombre;
+    }
 
     public int getIdPersona() {
         return idPersona;
@@ -11,14 +19,6 @@ public class Persona {
 
     public void setIdPersona(int idPersona) {
         this.idPersona = idPersona;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
     }
 
     public String getDocumento() {
