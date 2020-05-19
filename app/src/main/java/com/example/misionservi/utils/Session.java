@@ -1,4 +1,4 @@
-package com.example.misionservi;
+package com.example.misionservi.utils;
 
 import android.content.Context;
 import android.content.SharedPreferences;

@@ -7,41 +7,21 @@ import android.util.Log
 import android.view.View
 import android.widget.RadioButton
 import android.widget.Toast
-import com.example.misionservi.interfaces.JsonPlaceHolderApi
+import android.widget.Toast.LENGTH_SHORT
 import com.example.misionservi.model.Encuesta
 import com.example.misionservi.model.EncuestaBody
 import com.example.misionservi.model.RespuestaPost
-import com.example.misionservi.model.Token
+import com.example.misionservi.utils.ApiUtils
 import kotlinx.android.synthetic.main.activity_encuesta_pag_uno.*
-import okhttp3.OkHttpClient
-import okhttp3.Request
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
 
 class EncuestaPagUno : AppCompatActivity() {
-
-    private lateinit var jsonPlaceHolderApi: JsonPlaceHolderApi
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_encuesta_pag_uno)
-
-        val client = OkHttpClient.Builder().addInterceptor { chain ->
-            val newRequest: Request = chain.request().newBuilder()
-                .addHeader("Authorization", "Bearer " + intent.getStringExtra("token"))
-                .build()
-            chain.proceed(newRequest)
-        }.build()
-
-        val retrofit = Retrofit.Builder()
-            .client(client)
-            .baseUrl("https://servicioapp.azurewebsites.net/")
-            .addConverterFactory(GsonConverterFactory.create())
-            .build()
-        jsonPlaceHolderApi = retrofit.create(JsonPlaceHolderApi::class.java)
     }
 
     fun encuestaContinue(view: View){
@@ -134,7 +114,7 @@ class EncuestaPagUno : AppCompatActivity() {
 
             parameters.encuesta = encuesta
 
-            val call: Call<RespuestaPost> = jsonPlaceHolderApi.postEncuesta(parameters)
+            val call: Call<RespuestaPost> = ApiUtils.getAPIService(intent.getStringExtra("token")).postEncuesta(parameters)
 
             call?.enqueue(object : Callback<RespuestaPost> {
                 override fun onFailure(call: Call<RespuestaPost>, t: Throwable) {
@@ -142,12 +122,11 @@ class EncuestaPagUno : AppCompatActivity() {
                 }
 
                 override fun onResponse(call: Call<RespuestaPost>, response: Response<RespuestaPost>) {
-                    Log.v("retrofit", "call failed encuesta")
+                    Toast.makeText(this@EncuestaPagUno, response.body()?.mensaje, LENGTH_SHORT).show();
+                    val intent = Intent(this@EncuestaPagUno, MainActivity::class.java)
+                    startActivity(intent)
                 }
             })
-            Toast.makeText(this, "Encuesta Enviada", Toast.LENGTH_LONG).show()
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
         }else{
             Toast.makeText(this, "Debe responder todas las preguntas", Toast.LENGTH_LONG).show()
         }

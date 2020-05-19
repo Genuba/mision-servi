@@ -10,42 +10,21 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.misionservi.interfaces.JsonPlaceHolderApi
 import com.example.misionservi.model.Persona
-import okhttp3.Interceptor
-import okhttp3.OkHttpClient
-import okhttp3.Request
+import com.example.misionservi.utils.ApiUtils
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
-import java.io.IOException
 
 
 class PersonaForm : AppCompatActivity() {
 
     private var txtCedula: EditText? = null
     private var txtNombre: EditText? = null
-    private lateinit var jsonPlaceHolderApi: JsonPlaceHolderApi
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_persona_form)
-
-        val client = OkHttpClient.Builder().addInterceptor { chain ->
-            val newRequest: Request = chain.request().newBuilder()
-                .addHeader("Authorization", "Bearer " + intent.getStringExtra("token"))
-                .build()
-            chain.proceed(newRequest)
-        }.build()
-
-        val retrofit = Retrofit.Builder()
-            .client(client)
-            .baseUrl("https://servicioapp.azurewebsites.net/")
-            .addConverterFactory(GsonConverterFactory.create())
-            .build()
-        jsonPlaceHolderApi = retrofit.create(JsonPlaceHolderApi::class.java)
 
         this.txtCedula = findViewById(R.id.cedula)
         this.txtNombre = findViewById(R.id.nombre)
@@ -71,8 +50,9 @@ class PersonaForm : AppCompatActivity() {
         if (txtCedula?.getText().toString().isEmpty() || txtNombre?.getText().toString().isEmpty()){
             Toast.makeText(this, "Debe llenar todos los campos", Toast.LENGTH_LONG).show()
         }else{
+            var token = intent.getStringExtra("token")
             val intent = Intent(this, EncuestaPagUno::class.java)
-            intent.putExtra("token",intent.getStringExtra("token"))
+            intent.putExtra("token",token)
             intent.putExtra("numeroDocumento", txtCedula?.getText().toString())
             intent.putExtra("nombre", txtNombre?.getText().toString())
             startActivity(intent)
@@ -81,7 +61,7 @@ class PersonaForm : AppCompatActivity() {
     }
 
     fun getPersona(cedula: String) {
-        val call: Call<Persona> = jsonPlaceHolderApi.getPersona(cedula)
+        val call: Call<Persona> = ApiUtils.getAPIService(intent.getStringExtra("token")).getPersona(cedula)
         call?.enqueue(object : Callback<Persona> {
             override fun onFailure(call: Call<Persona>?, t: Throwable?) {
                 Log.v("retrofit", "call failed persona")
