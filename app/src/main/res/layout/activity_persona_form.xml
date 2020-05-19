@@ -7,66 +7,67 @@
     android:background="#e9f2f1"
     tools:context=".PersonaForm">
 
-    <LinearLayout
-        android:layout_width="391dp"
-        android:layout_height="783dp"
-        android:layout_marginStart="2dp"
-        android:layout_marginLeft="2dp"
-        android:layout_marginTop="1dp"
-        android:layout_marginEnd="2dp"
-        android:layout_marginRight="2dp"
-        android:layout_marginBottom="1dp"
-        android:orientation="vertical"
-        android:padding="30dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginBottom="1dp"
             android:orientation="vertical"
-            android:background="#FFFFFF">
-            <TextView
-                android:id="@+id/textView1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:text="CÉDULA *"
-                />
+            android:padding="30dp">
 
-            <EditText
-                android:id="@+id/cedula"
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/textView1" />
+                android:background="#FFFFFF"
+                android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/cedula"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:text="NOMBRE COMPLETO *"
-                />
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CÉDULA *"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
 
-            <EditText
-                android:id="@+id/nombre"
+                <EditText
+                    android:id="@+id/cedula"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textView1" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/cedula"
+                    android:text="NOMBRE COMPLETO *"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/nombre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textView3" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/boton_guardar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/textView3"/>
-        </RelativeLayout>
+                android:onClick="encuestaContinue"
+                android:text="Continuar" />
 
-        <Button
-            android:id="@+id/boton_guardar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="encuestaContinue"
-            android:text="Continuar" />
+        </LinearLayout>
+    </ScrollView>
 
-    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

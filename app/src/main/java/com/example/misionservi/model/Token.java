@@ -1,6 +1,6 @@
 package com.example.misionservi.model;
 
-public class Login {
+public class Token {
     private String token;
     private String expiration;
 

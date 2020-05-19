@@ -9,4 +9,6 @@ class EncuestaPagUno : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_encuesta_pag_uno)
     }
+
+    fun encuestaContinue(){}
 }
