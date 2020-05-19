@@ -64,70 +64,70 @@ class EncuestaPagUno : AppCompatActivity() {
 
             var encuestaBody = EncuestaBody()
             var radio: RadioButton = findViewById(pUno)
-            encuestaBody.idPregunta = 0
-            encuestaBody.pregunta = ""
-            encuestaBody.isIdEStado = if (radio.text == "Si") true else false
-            encuesta.add(encuestaBody)
-
-            encuestaBody = EncuestaBody()
-            radio = findViewById(pDos)
-            encuestaBody.idPregunta = 1
-            encuestaBody.pregunta = ""
-            encuestaBody.isIdEStado = if (radio.text == "Si") true else false
-            encuesta.add(encuestaBody)
-
-            encuestaBody = EncuestaBody()
-            radio = findViewById(pTres)
-            encuestaBody.idPregunta = 2
-            encuestaBody.pregunta = ""
-            encuestaBody.isIdEStado = if (radio.text == "Si") true else false
-            encuesta.add(encuestaBody)
-
-            encuestaBody = EncuestaBody()
-            radio = findViewById(pCuatro)
-            encuestaBody.idPregunta = 3
-            encuestaBody.pregunta = ""
-            encuestaBody.isIdEStado = if (radio.text == "Si") true else false
-            encuesta.add(encuestaBody)
-
-            encuestaBody = EncuestaBody()
-            radio = findViewById(pCinco)
             encuestaBody.idPregunta = 4
             encuestaBody.pregunta = ""
             encuestaBody.isIdEStado = if (radio.text == "Si") true else false
             encuesta.add(encuestaBody)
 
             encuestaBody = EncuestaBody()
-            radio = findViewById(pSeis)
+            radio = findViewById(pDos)
             encuestaBody.idPregunta = 5
             encuestaBody.pregunta = ""
             encuestaBody.isIdEStado = if (radio.text == "Si") true else false
             encuesta.add(encuestaBody)
 
             encuestaBody = EncuestaBody()
-            radio = findViewById(pSiete)
+            radio = findViewById(pTres)
             encuestaBody.idPregunta = 6
             encuestaBody.pregunta = ""
             encuestaBody.isIdEStado = if (radio.text == "Si") true else false
             encuesta.add(encuestaBody)
 
             encuestaBody = EncuestaBody()
-            radio = findViewById(pOcho)
+            radio = findViewById(pCuatro)
             encuestaBody.idPregunta = 7
             encuestaBody.pregunta = ""
             encuestaBody.isIdEStado = if (radio.text == "Si") true else false
             encuesta.add(encuestaBody)
 
             encuestaBody = EncuestaBody()
-            radio = findViewById(pNueve)
+            radio = findViewById(pCinco)
             encuestaBody.idPregunta = 8
             encuestaBody.pregunta = ""
             encuestaBody.isIdEStado = if (radio.text == "Si") true else false
             encuesta.add(encuestaBody)
 
             encuestaBody = EncuestaBody()
-            radio = findViewById(pDiez)
+            radio = findViewById(pSeis)
             encuestaBody.idPregunta = 9
+            encuestaBody.pregunta = ""
+            encuestaBody.isIdEStado = if (radio.text == "Si") true else false
+            encuesta.add(encuestaBody)
+
+            encuestaBody = EncuestaBody()
+            radio = findViewById(pSiete)
+            encuestaBody.idPregunta = 10
+            encuestaBody.pregunta = ""
+            encuestaBody.isIdEStado = if (radio.text == "Si") true else false
+            encuesta.add(encuestaBody)
+
+            encuestaBody = EncuestaBody()
+            radio = findViewById(pOcho)
+            encuestaBody.idPregunta = 11
+            encuestaBody.pregunta = ""
+            encuestaBody.isIdEStado = if (radio.text == "Si") true else false
+            encuesta.add(encuestaBody)
+
+            encuestaBody = EncuestaBody()
+            radio = findViewById(pNueve)
+            encuestaBody.idPregunta = 12
+            encuestaBody.pregunta = ""
+            encuestaBody.isIdEStado = if (radio.text == "Si") true else false
+            encuesta.add(encuestaBody)
+
+            encuestaBody = EncuestaBody()
+            radio = findViewById(pDiez)
+            encuestaBody.idPregunta = 13
             encuestaBody.pregunta = ""
             encuestaBody.isIdEStado = if (radio.text == "Si") true else false
             encuesta.add(encuestaBody)
