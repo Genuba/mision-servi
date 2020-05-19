@@ -78,4 +78,9 @@ class MainActivity : AppCompatActivity() {
         })
     }
 
+    fun archivosInstructivos(view: View) {
+        val intent = Intent(this, DescargarAchivos::class.java)
+        startActivity(intent)
+    }
+
 }
