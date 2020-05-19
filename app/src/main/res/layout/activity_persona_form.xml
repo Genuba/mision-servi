@@ -33,7 +33,7 @@
                     android:id="@+id/textView1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="CÉDULA *"
+                    android:text="@string/cedula"
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
@@ -41,6 +41,10 @@
                     android:id="@+id/cedula"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:autofillHints="username"
+                    android:inputType="number"
+                    android:maxLength="30"
+                    android:hint="@string/cedula"
                     android:layout_below="@id/textView1" />
 
                 <TextView
@@ -48,15 +52,22 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/cedula"
-                    android:text="NOMBRE COMPLETO *"
+                    android:text="@string/nombreCompleto"
                     android:textSize="20sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    />
 
                 <EditText
                     android:id="@+id/nombre"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/textView3" />
+                    android:layout_below="@id/textView3"
+                    android:autofillHints="username"
+                    android:maxLines="1"
+                    android:maxLength="150"
+                    android:inputType="textCapWords"
+                    android:hint="@string/nombreCompleto">
+                </EditText>
             </RelativeLayout>
 
             <Button
@@ -64,7 +75,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:onClick="encuestaContinue"
-                android:text="Continuar" />
+                android:text="@string/continuar" />
 
         </LinearLayout>
     </ScrollView>

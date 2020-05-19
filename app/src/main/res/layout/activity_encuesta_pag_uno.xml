@@ -35,7 +35,7 @@
                     android:id="@+id/textView1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="¿PRESENTA ALGUNO DE LOS SIGUIENTES SÍNTOMAS? *"
+                    android:text="@string/pregunta1"
                     android:textSize="25sp"
                     android:textStyle="bold" />
 
@@ -45,7 +45,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/textView1"
                     android:layout_marginTop="20dp"
-                    android:text="Malestar o dolor de garganta"
+                    android:text="@string/pregunta2"
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
@@ -59,13 +59,13 @@
                         android:id="@+id/radioButton11"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Si" />
+                        android:text="@string/si" />
 
                     <RadioButton
                         android:id="@+id/radioButton12"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="No" />
+                        android:text="@android:string/no" />
                 </RadioGroup>
 
                 <TextView
@@ -74,7 +74,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/rbPreguntaUno"
                     android:layout_marginTop="20dp"
-                    android:text="Sensación de malestar general"
+                    android:text="@string/pregunta3"
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
@@ -88,13 +88,13 @@
                         android:id="@+id/radioButton21"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Si" />
+                        android:text="@string/si" />
 
                     <RadioButton
                         android:id="@+id/radioButton22"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="No" />
+                        android:text="@string/no" />
                 </RadioGroup>
 
                 <TextView
@@ -103,7 +103,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/rbPreguntaDos"
                     android:layout_marginTop="20dp"
-                    android:text="Sensación de fatiga o cansancio muscular"
+                    android:text="@string/pregunta4"
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
@@ -117,13 +117,13 @@
                         android:id="@+id/radioButton31"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Si" />
+                        android:text="@string/si" />
 
                     <RadioButton
                         android:id="@+id/radioButton32"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="No" />
+                        android:text="@string/no" />
                 </RadioGroup>
 
                 <TextView
@@ -132,7 +132,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/rbPreguntaTres"
                     android:layout_marginTop="20dp"
-                    android:text="Dificultad para respirar"
+                    android:text="@string/pregunta5"
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
@@ -146,13 +146,13 @@
                         android:id="@+id/radioButton41"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Si" />
+                        android:text="@string/si" />
 
                     <RadioButton
                         android:id="@+id/radioButton42"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="No" />
+                        android:text="@string/no" />
                 </RadioGroup>
 
                 <TextView
@@ -161,7 +161,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/rbPreguntaCuatro"
                     android:layout_marginTop="20dp"
-                    android:text="Congestión nasal"
+                    android:text="@string/pregunta6"
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
@@ -175,13 +175,13 @@
                         android:id="@+id/radioButton51"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Si" />
+                        android:text="@string/si" />
 
                     <RadioButton
                         android:id="@+id/radioButton52"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="No" />
+                        android:text="@string/no" />
                 </RadioGroup>
 
                 <TextView
@@ -190,7 +190,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/rbPreguntaCinco"
                     android:layout_marginTop="20dp"
-                    android:text="Perdida de olfato y/o el gusto"
+                    android:text="@string/pregunta7"
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
@@ -204,13 +204,13 @@
                         android:id="@+id/radioButton61"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Si" />
+                        android:text="@string/si" />
 
                     <RadioButton
                         android:id="@+id/radioButton62"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="No" />
+                        android:text="@string/no" />
                 </RadioGroup>
 
                 <TextView
@@ -219,7 +219,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/rbPreguntaSeis"
                     android:layout_marginTop="20dp"
-                    android:text="Fiebre (+38°C)"
+                    android:text="@string/pregunta8"
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
@@ -233,13 +233,13 @@
                         android:id="@+id/radioButton71"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Si" />
+                        android:text="@string/si" />
 
                     <RadioButton
                         android:id="@+id/radioButton72"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="No" />
+                        android:text="@string/no" />
                 </RadioGroup>
 
                 <TextView
@@ -248,7 +248,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/rbPreguntaSiete"
                     android:layout_marginTop="20dp"
-                    android:text="Tos"
+                    android:text="@string/pregunta9"
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
@@ -262,13 +262,13 @@
                         android:id="@+id/radioButton81"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Si" />
+                        android:text="@string/si" />
 
                     <RadioButton
                         android:id="@+id/radioButton82"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="No" />
+                        android:text="@string/no" />
                 </RadioGroup>
 
                 <TextView
@@ -277,7 +277,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/rbPreguntaOcho"
                     android:layout_marginTop="20dp"
-                    android:text="¿Vive con alguien sospechosos o confirmado de tener COVID-19?"
+                    android:text="@string/pregunta10"
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
@@ -291,13 +291,13 @@
                         android:id="@+id/radioButton91"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Si" />
+                        android:text="@string/si" />
 
                     <RadioButton
                         android:id="@+id/radioButton92"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="No" />
+                        android:text="@string/no" />
                 </RadioGroup>
 
                 <TextView
@@ -306,7 +306,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/rbPreguntaNueve"
                     android:layout_marginTop="20dp"
-                    android:text="¿En los últimos 14 días ha tenido contacto estrecho (por mas de 15 minutps, a menos de 2 metros y sin usar elementos de protección personal) con alguien sospechoso o confirmado de tener COVID-19? "
+                    android:text="@string/pregunta11"
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
@@ -320,16 +320,15 @@
                         android:id="@+id/radioButton101"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Si" />
+                        android:text="@string/si" />
 
                     <RadioButton
                         android:id="@+id/radioButton102"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="No" />
+                        android:text="@string/no" />
                 </RadioGroup>
 
-                />
 
                 <TextView
                     android:id="@+id/textView12"
@@ -337,7 +336,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/rbPreguntaDiez"
                     android:layout_marginTop="15dp"
-                    android:text="Si marco SÍ en una o más de las respuestas, por favor comuníquese inmediatamente con su supervisor(a) y no acuda a su sitio de trabajo."
+                    android:text="@string/pregunta12"
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
@@ -349,7 +348,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:onClick="encuestaContinue"
-                android:text="Enviar" />
+                android:text="@string/enviar" />
 
         </LinearLayout>
     </ScrollView>

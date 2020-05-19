@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">Mision Servi</string>
+    <string name="cedula">CÉDULA *</string>
+    <string name="nombreCompleto">NOMBRE COMPLETO *</string>
+    <string name="continuar">Continuar</string>
+    <string name="pregunta1">¿PRESENTA ALGUNO DE LOS SIGUIENTES SÍNTOMAS? *</string>
+    <string name="pregunta2">Malestar o dolor de garganta</string>
+    <string name="si">Si</string>
+    <string name="no">No</string>
+    <string name="pregunta3">Sensación de malestar general</string>
+    <string name="pregunta4">Sensación de fatiga o cansancio muscular</string>
+    <string name="pregunta5">Dificultad para respirar</string>
+    <string name="pregunta6">Congestión nasal</string>
+    <string name="pregunta7">Perdida de olfato y/o el gusto</string>
+    <string name="pregunta8">Fiebre (+38°C)</string>
+    <string name="pregunta9">Tos</string>
+    <string name="pregunta10">¿Vive con alguien sospechosos o confirmado de tener COVID-19?</string>
+    <string name="pregunta11">"¿En los últimos 14 días ha tenido contacto estrecho (por mas de 15 minutps, a menos de 2 metros y sin usar elementos de protección personal) con alguien sospechoso o confirmado de tener COVID-19? "</string>
+    <string name="pregunta12">Si marco SÍ en una o más de las respuestas, por favor comuníquese inmediatamente con su supervisor(a) y no acuda a su sitio de trabajo.</string>
+    <string name="enviar">Enviar</string>
 </resources>
