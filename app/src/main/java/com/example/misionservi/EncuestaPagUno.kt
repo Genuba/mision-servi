@@ -7,6 +7,7 @@ import android.util.Log
 import android.view.View
 import android.widget.RadioButton
 import android.widget.Toast
+import android.widget.Toast.LENGTH_LONG
 import android.widget.Toast.LENGTH_SHORT
 import com.example.misionservi.model.Encuesta
 import com.example.misionservi.model.EncuestaBody
@@ -128,7 +129,7 @@ class EncuestaPagUno : AppCompatActivity() {
 
                 override fun onResponse(call: Call<RespuestaPost>, response: Response<RespuestaPost>) {
                     loadingDailog.dismissDialog()
-                    Toast.makeText(this@EncuestaPagUno, response.body()?.mensaje, LENGTH_SHORT).show();
+                    Toast.makeText(this@EncuestaPagUno, response.body()?.mensaje, LENGTH_LONG).show();
                     val intent = Intent(this@EncuestaPagUno, MainActivity::class.java)
                     startActivity(intent)
                 }
