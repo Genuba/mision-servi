@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".FileProtocoloSeguridad"></activity>
+        <activity android:name=".Autorizacion"></activity>
+        <activity android:name=".FileProtocoloSeguridad" />
         <activity android:name=".FileCoronavirus" />
         <activity android:name=".DescargarAchivos" />
         <activity android:name=".EncuestaPagUno" />

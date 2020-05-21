@@ -28,54 +28,11 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        this.rbAutorizo = findViewById<CheckBox>(R.id.rbAutorizo);
-
-        session = Session(this)
-
-        val retrofit = Retrofit.Builder()
-            .baseUrl("https://servicioapp.azurewebsites.net/")
-            .addConverterFactory(GsonConverterFactory.create())
-            .build()
-        jsonPlaceHolderApi = retrofit.create(JsonPlaceHolderApi::class.java)
-
-        getTokenLogin();
-
     }
 
-    fun encuestaCheckbox(v: View?) {
-        val s = if (rbAutorizo?.isChecked()!!) "Marcado" else "Debe Autorizar"
-
-        if(s.equals("Marcado")){
-            val intent = Intent(this, PersonaForm::class.java)
-            intent.putExtra("token",session.gettoken())
-            startActivity(intent)
-        }else {
-            Toast.makeText(this, s, Toast.LENGTH_LONG).show()
-        }
-
-    }
-
-    fun getTokenLogin() {
-        var token: String = ""
-        val parameters = LoginPost()
-        parameters.email = "OMSClaro"
-        parameters.password = "pxQHf50Lht4u9Lzus.Q8x"
-        val call: Call<Token> = jsonPlaceHolderApi.postLogin(parameters)
-
-        call?.enqueue(object : Callback<Token> {
-            override fun onFailure(call: Call<Token>?, t: Throwable?) {
-                Log.v("retrofit", "call failed get token")
-            }
-
-            override fun onResponse(call: Call<Token>, response: Response<Token>) {
-                var postResponse = response.body()
-                if (postResponse != null) {
-
-                    session.settoken(response.body()?.token)
-                }
-            }
-        })
+    fun autorizacionCheckbox(view: View) {
+        val intent = Intent(this, Autorizacion::class.java)
+        startActivity(intent)
     }
 
     fun archivosInstructivos(view: View) {
