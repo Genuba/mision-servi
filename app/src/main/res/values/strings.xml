@@ -1,7 +1,7 @@
 <resources>
-    <string name="app_name">Mision Servir</string>
-    <string name="cedula">CÉDULA *</string>
-    <string name="nombreCompleto">NOMBRE COMPLETO *</string>
+    <string name="app_name">Misión Servir</string>
+    <string name="cedula">Cédula *</string>
+    <string name="nombreCompleto">Nombre Completo *</string>
     <string name="continuar">Continuar</string>
     <string name="pregunta1">¿PRESENTA ALGUNO DE LOS SIGUIENTES SÍNTOMAS? *</string>
     <string name="pregunta2">Malestar o dolor de garganta</string>

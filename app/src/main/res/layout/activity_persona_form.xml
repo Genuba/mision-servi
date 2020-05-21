@@ -29,39 +29,22 @@
                 android:background="#FFFFFF"
                 android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/textView1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/cedula"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
-
-                <EditText
+                 <EditText
                     android:id="@+id/cedula"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:autofillHints="username"
                     android:inputType="number"
                     android:maxLength="30"
-                    android:hint="@string/cedula"
-                    android:layout_below="@id/textView1" />
+                    android:hint="@string/cedula"/>
 
-                <TextView
-                    android:id="@+id/textView3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/cedula"
-                    android:text="@string/nombreCompleto"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    />
+
 
                 <EditText
                     android:id="@+id/nombre"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/textView3"
+                    android:layout_below="@id/cedula"
                     android:autofillHints="username"
                     android:maxLines="1"
                     android:maxLength="150"
