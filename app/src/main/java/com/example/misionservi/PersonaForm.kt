@@ -73,6 +73,7 @@ class PersonaForm : AppCompatActivity() {
                     txtNombre?.setText(postResponse.mombre, TextView.BufferType.EDITABLE)
                     txtNombre?.setEnabled(false)
                 }else {
+                    txtNombre?.setText("", TextView.BufferType.EDITABLE)
                     txtNombre?.setEnabled(true)
                 }
             }
