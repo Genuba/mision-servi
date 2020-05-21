@@ -38,6 +38,7 @@
                     android:id="@+id/textView1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/blue"
                     android:text="ENCUESTA DE VERIFICACIÓN DE SÍNTOMAS DIARIA"
                     android:textSize="20sp"
                     android:textStyle="bold" />
@@ -47,6 +48,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/textView1"
+                    android:fontFamily="@font/blue"
                     android:text="Toda la información descrita en el siguiente formulario se recoge con fines estrictamente de interés público ante la situación decretada por las Autoridades Públicas, para proteger y salvaguardar un interés esencial  para la vida de las personas. "
                     android:textStyle="bold" />
 
@@ -56,6 +58,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/textView2"
                     android:layout_marginTop="10dp"
+                    android:fontFamily="@font/blue"
                     android:text="Obligatorio *"
                     android:textColor="#f00"
                     android:textStyle="bold" />
