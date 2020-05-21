@@ -12,6 +12,7 @@ import com.example.misionservi.model.Encuesta
 import com.example.misionservi.model.EncuestaBody
 import com.example.misionservi.model.RespuestaPost
 import com.example.misionservi.utils.ApiUtils
+import com.example.misionservi.utils.LoadingDailog
 import kotlinx.android.synthetic.main.activity_encuesta_pag_uno.*
 import retrofit2.Call
 import retrofit2.Callback
@@ -25,6 +26,10 @@ class EncuestaPagUno : AppCompatActivity() {
     }
 
     fun encuestaContinue(view: View){
+
+        var loadingDailog = LoadingDailog(this)
+        loadingDailog.startLoadingDialog()
+
         var pUno: Int = rbPreguntaUno.checkedRadioButtonId
         var pDos: Int = rbPreguntaDos.checkedRadioButtonId
         var pTres: Int = rbPreguntaTres.checkedRadioButtonId
@@ -122,6 +127,7 @@ class EncuestaPagUno : AppCompatActivity() {
                 }
 
                 override fun onResponse(call: Call<RespuestaPost>, response: Response<RespuestaPost>) {
+                    loadingDailog.dismissDialog()
                     Toast.makeText(this@EncuestaPagUno, response.body()?.mensaje, LENGTH_SHORT).show();
                     val intent = Intent(this@EncuestaPagUno, MainActivity::class.java)
                     startActivity(intent)

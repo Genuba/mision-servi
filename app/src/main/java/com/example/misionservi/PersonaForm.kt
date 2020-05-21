@@ -69,9 +69,12 @@ class PersonaForm : AppCompatActivity() {
 
             override fun onResponse(call: Call<Persona>, response: Response<Persona>) {
                 var postResponse = response.body()
-                if (postResponse != null) {
+                if (postResponse?.mombre != null) {
                     txtNombre?.setText(postResponse.mombre, TextView.BufferType.EDITABLE)
-                };
+                    txtNombre?.setEnabled(false)
+                }else {
+                    txtNombre?.setEnabled(true)
+                }
             }
 
         })
