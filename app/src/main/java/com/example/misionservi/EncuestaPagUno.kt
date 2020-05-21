@@ -28,9 +28,6 @@ class EncuestaPagUno : AppCompatActivity() {
 
     fun encuestaContinue(view: View){
 
-        var loadingDailog = LoadingDailog(this)
-        loadingDailog.startLoadingDialog()
-
         var pUno: Int = rbPreguntaUno.checkedRadioButtonId
         var pDos: Int = rbPreguntaDos.checkedRadioButtonId
         var pTres: Int = rbPreguntaTres.checkedRadioButtonId
@@ -43,6 +40,9 @@ class EncuestaPagUno : AppCompatActivity() {
         var pDiez: Int = rbPreguntaDiez.checkedRadioButtonId
 
         if(pUno != -1 && pDos != -1 && pTres != -1 && pCuatro != -1 && pCinco != -1 && pSeis != -1 && pSiete != -1 && pOcho != -1 && pNueve != -1 && pDiez != -1){
+            var loadingDailog = LoadingDailog(this)
+            loadingDailog.startLoadingDialog()
+
             val parameters = Encuesta()
             var encuesta= mutableListOf<EncuestaBody>()
             parameters.numeroDocumento = intent.getStringExtra("numeroDocumento")
