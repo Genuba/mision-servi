@@ -12,6 +12,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.misionservi.model.Persona
 import com.example.misionservi.utils.ApiUtils
+import com.example.misionservi.utils.LoadingDailog
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -40,7 +41,7 @@ class PersonaForm : AppCompatActivity() {
 
             override fun onTextChanged(s: CharSequence, start: Int,
                                        before: Int, count: Int) {
-                getPersona(s.toString())
+                if(s.toString().length > 6) getPersona(s.toString())
             }
         })
     }
@@ -62,12 +63,17 @@ class PersonaForm : AppCompatActivity() {
 
     fun getPersona(cedula: String) {
         val call: Call<Persona> = ApiUtils.getAPIService(intent.getStringExtra("token")).getPersona(cedula)
+
+        var loadingDailog = LoadingDailog(this)
+        loadingDailog.startLoadingDialog()
+
         call?.enqueue(object : Callback<Persona> {
             override fun onFailure(call: Call<Persona>?, t: Throwable?) {
                 Log.v("retrofit", "call failed persona")
             }
 
             override fun onResponse(call: Call<Persona>, response: Response<Persona>) {
+                loadingDailog.dismissDialog()
                 var postResponse = response.body()
                 if (postResponse?.mombre != null) {
                     txtNombre?.setText(postResponse.mombre, TextView.BufferType.EDITABLE)

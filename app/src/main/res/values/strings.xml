@@ -30,5 +30,5 @@
     <string name="txtProtocolo1">Protocolo de seguridad</string>
     <string name="txtverpdf">Ver PDF</string>
     <string name="txtCoronavirus">Coronavirus</string>
-    <string name="txEnviar">Enviando Encuesta...</string>
+    <string name="txEnviar">Cargando ...</string>
 </resources>

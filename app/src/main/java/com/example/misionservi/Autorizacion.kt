@@ -1,6 +1,9 @@
 package com.example.misionservi
 
+import android.content.Context
 import android.content.Intent
+import android.net.ConnectivityManager
+import android.net.NetworkInfo
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -38,7 +41,17 @@ class Autorizacion : AppCompatActivity() {
             .build()
         jsonPlaceHolderApi = retrofit.create(JsonPlaceHolderApi::class.java)
 
-        getTokenLogin();
+        val cm = this@Autorizacion.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+        val activeNetwork: NetworkInfo? = cm.activeNetworkInfo
+        val isConnected: Boolean = activeNetwork?.isConnectedOrConnecting == true
+
+        if (!isConnected) {
+            Toast.makeText(this, "Para poder continuar debe connectarse a internet", Toast.LENGTH_LONG).show()
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }else{
+            getTokenLogin();
+        }
     }
 
     fun encuestaCheckbox(v: View?) {
