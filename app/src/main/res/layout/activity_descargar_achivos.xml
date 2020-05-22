@@ -28,9 +28,9 @@
                 android:id="@+id/textView13"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Protocolo de seguridad"
+                android:text="@string/txtProtocolo1"
                 android:textSize="20sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
 
             <Button
@@ -38,22 +38,22 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:onClick="clickBtnProtocoloSeguridad"
-                android:text="Ver PDF" />
+                android:text="@string/txtverpdf" />
 
             <TextView
                 android:id="@+id/textView12"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Coronavirus"
+                android:text="@string/txtCoronavirus"
                 android:textSize="20sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/button2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:onClick="clickBtnCoronavirus"
-                android:text="Ver PDF" />
+                android:text="@string/txtverpdf" />
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

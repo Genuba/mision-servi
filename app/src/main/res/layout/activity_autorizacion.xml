@@ -26,6 +26,7 @@
                 android:id="@+id/imageView4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:contentDescription="@string/txtlogomisionservir"
                 app:srcCompat="@drawable/output_onlinepngtools" />
 
             <RelativeLayout
@@ -38,8 +39,7 @@
                     android:id="@+id/textView1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/blue"
-                    android:text="ENCUESTA DE VERIFICACIÓN DE SÍNTOMAS DIARIA"
+                    android:text="@string/txtencueta1"
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
@@ -48,8 +48,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/textView1"
-                    android:fontFamily="@font/blue"
-                    android:text="Toda la información descrita en el siguiente formulario se recoge con fines estrictamente de interés público ante la situación decretada por las Autoridades Públicas, para proteger y salvaguardar un interés esencial  para la vida de las personas. "
+                    android:text="@string/txtpregunt2"
                     android:textStyle="bold" />
 
                 <TextView
@@ -58,8 +57,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/textView2"
                     android:layout_marginTop="10dp"
-                    android:fontFamily="@font/blue"
-                    android:text="Obligatorio *"
+                    android:text="@string/txtpregunta4"
                     android:textColor="#f00"
                     android:textStyle="bold" />
             </RelativeLayout>
@@ -83,15 +81,14 @@
                 android:id="@+id/rbAutorizo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Autorizo" />
+                android:text="@string/txtAutorizo" />
 
             <Button
                 android:id="@+id/boton_guardar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
                 android:onClick="encuestaCheckbox"
-                android:text="Continuar" />
+                android:text="@string/txt" />
 
         </LinearLayout>
     </ScrollView>

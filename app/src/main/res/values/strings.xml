@@ -18,4 +18,16 @@
     <string name="pregunta11">"¿En los últimos 14 días ha tenido contacto estrecho (por mas de 15 minutos, a menos de 2 metros y sin usar elementos de protección personal) con alguien sospechoso o confirmado de tener COVID-19? "</string>
     <string name="pregunta12">Si marco SÍ en una o más de las respuestas, por favor comuníquese inmediatamente con su supervisor(a) y no acuda a su sitio de trabajo.</string>
     <string name="enviar">Enviar</string>
+    <string name="documentosdeconsulta">Documentos de Consulta</string>
+    <string name="txtlogomisionservir">logo Mosión Servir</string>
+    <string name="btencuestacovi">Encuesta Salud Diaria (COVID-19)</string>
+    <string name="tstMision">Nuestra Misión es Servirle</string>
+    <string name="txtencueta1">ENCUESTA DE VERIFICACIÓN DE SÍNTOMAS DIARIA</string>
+    <string name="txtpregunt2">"Toda la información descrita en el siguiente formulario se recoge con fines estrictamente de interés público ante la situación decretada por las Autoridades Públicas, para proteger y salvaguardar un interés esencial  para la vida de las personas. "</string>
+    <string name="txtpregunta4">Obligatorio *</string>
+    <string name="txtAutorizo">Autorizo</string>
+    <string name="txt">Continuar</string>
+    <string name="txtProtocolo1">Protocolo de seguridad</string>
+    <string name="txtverpdf">Ver PDF</string>
+    <string name="txtCoronavirus">Coronavirus</string>
 </resources>

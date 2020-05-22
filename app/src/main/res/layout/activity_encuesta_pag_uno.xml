@@ -35,7 +35,6 @@
                     android:id="@+id/textView1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/blue"
                     android:text="@string/pregunta1"
                     android:textSize="25sp"
                     android:textStyle="bold" />
@@ -46,7 +45,6 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/textView1"
                     android:layout_marginTop="20dp"
-                    android:fontFamily="@font/blue"
                     android:text="@string/pregunta2"
                     android:textSize="20sp"
                     android:textStyle="bold" />
@@ -67,8 +65,7 @@
                         android:id="@+id/radioButton12"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/blue"
-                        android:text="No" />
+                        android:text="@string/no" />
                 </RadioGroup>
 
                 <TextView
@@ -106,7 +103,6 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/rbPreguntaDos"
                     android:layout_marginTop="20dp"
-                    android:fontFamily="@font/blue"
                     android:text="@string/pregunta4"
                     android:textSize="20sp"
                     android:textStyle="bold" />
