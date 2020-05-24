@@ -8,7 +8,6 @@ import android.view.View
 import android.widget.RadioButton
 import android.widget.Toast
 import android.widget.Toast.LENGTH_LONG
-import android.widget.Toast.LENGTH_SHORT
 import com.example.misionservi.model.Encuesta
 import com.example.misionservi.model.EncuestaBody
 import com.example.misionservi.model.RespuestaPost

@@ -54,6 +54,20 @@
                 android:layout_height="wrap_content"
                 android:onClick="clickBtnCoronavirus"
                 android:text="@string/txtverpdf" />
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Manual de inducción"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/button12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="clickBtnManualInduccion"
+                android:text="@string/txtverpdf" />
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

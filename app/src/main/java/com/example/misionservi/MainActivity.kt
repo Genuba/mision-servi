@@ -19,14 +19,18 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        // poner el icono en el action Bar
+
+        getSupportActionBar()?.setDisplayShowHomeEnabled(true)
+        getSupportActionBar()?.setIcon(R.mipmap.ic_launcher)
     }
 
-    fun autorizacionCheckbox(view: View) {
+    fun autorizacionCheckbox() {
         val intent = Intent(this, Autorizacion::class.java)
         startActivity(intent)
     }
 
-    fun archivosInstructivos(view: View) {
+    fun archivosInstructivos() {
         val intent = Intent(this, DescargarAchivos::class.java)
         startActivity(intent)
     }

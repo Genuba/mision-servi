@@ -21,4 +21,8 @@ class DescargarAchivos : AppCompatActivity() {
         val intent = Intent(this, FileCoronavirus::class.java)
         startActivity(intent)
     }
+    fun clickBtnManualInduccion(view: View) {
+        val intent = Intent(this, manualInduccioActivity::class.java)
+        startActivity(intent)
+    }
 }
