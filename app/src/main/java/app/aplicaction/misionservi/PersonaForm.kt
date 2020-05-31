@@ -2,10 +2,9 @@ package app.aplicaction.misionservi
 
 import android.content.Intent
 import android.os.Bundle
-import android.text.Editable
-import android.text.TextWatcher
 import android.util.Log
 import android.view.View
+import android.view.View.OnFocusChangeListener
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
@@ -26,33 +25,18 @@ class PersonaForm : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_persona_form)
-        // poner el icono en el action Bar
-
-        getSupportActionBar()?.setDisplayShowHomeEnabled(true)
-        getSupportActionBar()?.setIcon(R.mipmap.ic_launcher)
-
         this.txtCedula = findViewById(R.id.cedula)
         this.txtNombre = findViewById(R.id.nombre)
+        var tcedula = this.txtCedula
 
-        this.txtCedula?.addTextChangedListener(object : TextWatcher {
-
-            override fun afterTextChanged(s: Editable) {
-            }
-
-            override fun beforeTextChanged(s: CharSequence, start: Int,
-                                           count: Int, after: Int) {
-                                    getPersona(s.toString())
-            }
-
-            override fun onTextChanged(s: CharSequence, start: Int,
-                                       before: Int, count: Int) {
-               // if(s.toString().length > 6) getPersona(s.toString())
+        tcedula?.setOnFocusChangeListener(OnFocusChangeListener { v, hasFocus ->
+            if (!hasFocus) {
+                getPersona()
             }
         })
     }
 
     fun encuestaContinue(v: View?) {
-
         if (txtCedula?.getText().toString().isEmpty() || txtNombre?.getText().toString().isEmpty()){
             Toast.makeText(this, "Debe llenar todos los campos", Toast.LENGTH_LONG).show()
         }else{
@@ -66,8 +50,8 @@ class PersonaForm : AppCompatActivity() {
 
     }
 
-    fun getPersona(cedula: String) {
-        val call: Call<Persona> = ApiUtils.getAPIService(intent.getStringExtra("token")).getPersona(cedula)
+    fun getPersona() {
+        val call: Call<Persona> = ApiUtils.getAPIService(intent.getStringExtra("token")).getPersona(this.txtCedula?.text.toString())
 
         var loadingDailog = LoadingDailog(this)
         loadingDailog.startLoadingDialog()
