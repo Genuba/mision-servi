@@ -59,6 +59,7 @@ class PersonaForm : AppCompatActivity() {
         call?.enqueue(object : Callback<Persona> {
             override fun onFailure(call: Call<Persona>?, t: Throwable?) {
                 Log.v("retrofit", "call failed persona")
+                System.exit(0)
             }
 
             override fun onResponse(call: Call<Persona>, response: Response<Persona>) {
